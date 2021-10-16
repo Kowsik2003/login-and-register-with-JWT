@@ -42,7 +42,7 @@ const postData =  async (url, data = {}) =>
  	const password = document.getElementById('password').value;
  	const confirmpassword = document.getElementById('confirmpassword').value;
 
- 	await postData('http://127.0.0.1:1000/register',{email,password,confirmpassword});
+ 	await postData('https://kowsik-2003.herokuapp.com/register',{email,password,confirmpassword});
 
  	setNULL();
  });
