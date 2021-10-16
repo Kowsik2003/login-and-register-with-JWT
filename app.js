@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const dotenv = require('dotenv');
+//const dotenv = require('dotenv');
 const pug = require('pug');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -12,7 +12,7 @@ const webCtrl = require(`${__dirname}/controller/webCtrl`);
 const errCtrl = require(`${__dirname}/controller/errorCtrl`);
 
 const app = express();
-dotenv.config({path : './config.env'})
+//dotenv.config({path : './config.env'})
 
 app.use(bodyParser.urlencoded({ extended: true })); 
 
@@ -39,5 +39,5 @@ dotenv.config({path : path.join(__dirname,'config.env')})
 mongoose.connect(process.env.MONGODB_CLOUD_DB).then(() => console.log('DB connected..')).catch(err => console.log(err));
 
 app.listen(process.env.PORT,() => {
-	console.log('TODO running ...');
+	//console.log('TODO running ...');
 }); 
