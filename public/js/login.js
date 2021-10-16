@@ -44,7 +44,7 @@ document.querySelector('.form').addEventListener('submit',async e => {
 	if(!email || !password)
 		return alert('provide email and password');
 
-	await postData('http://127.0.0.1:1000/',{email , password});
+	await postData('https://kowsik-2003.herokuapp.com/',{email , password});
 
 	setNULL();
 });
