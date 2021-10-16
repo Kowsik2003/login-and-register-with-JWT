@@ -1,0 +1,30 @@
+extend base
+
+block content 
+ html
+  body
+    #login
+      h3.text-center.text-white.pt-5 Registration Form
+      .container
+        #login-row.row.justify-content-center.align-items-center
+          #login-column.col-md-6
+            #login-box.col-md-12
+              form#login-form.form1
+                h3.text-center.text-info Register
+                .form-group
+                  label.text-info(for='username') Email:
+                  br
+                  input#email.form-control(type='email' name='email')
+                .form-group
+                  label.text-info(for='password') Password:
+                  br
+                  input#password.form-control(type='password' name='password')
+                .form-group
+                  label.text-info(for='password') ConfirmPassword:
+                  br
+                  input#confirmpassword.form-control(type='password' name='confirmpassword')
+                  br
+                  input#btn.btn.btn-info.btn-md(type='submit' name='submit' value='submit')
+              #register-link.text-right
+                a.text-info(href='/') Login 
+    script(src='/js/register.js')

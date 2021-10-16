@@ -1,0 +1,27 @@
+extend base
+
+block content 
+ html
+  body
+    #login
+      h3.text-center.text-white.pt-5 Login form
+      .container
+        #login-row.row.justify-content-center.align-items-center
+          #login-column.col-md-6
+            #login-box.col-md-12
+              form#login-form.form(action='' method='post')
+                h3.text-center.text-info Login
+                .form-group
+                  label.text-info(for='username') Email:
+                  br
+                  input#email.form-control(type='email' name='email')
+                .form-group
+                  label.text-info(for='password') Password:
+                  br
+                  input#password.form-control(type='password' name='password')
+                  br
+                  input.btn.btn-info.btn-md(type='submit' name='submit' value='submit')
+              #register-link.text-right
+                a.text-info(href='/register')|   Register here    |
+                a(href='/check')|   check Login   |
+    script(src='/js/login.js')
