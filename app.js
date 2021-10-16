@@ -34,7 +34,7 @@ app.route('/check').get(webCtrl.checkLogin).post(webCtrl.verifyToken);
 app.route('/register').get(webCtrl.regPage).post(webCtrl.regUser);
 
 app.use(errCtrl);
-dotenv.config({path : path.join(__dirname,'config.env')})
+//dotenv.config({path : path.join(__dirname,'config.env')})
 
 mongoose.connect(process.env.MONGODB_CLOUD_DB).then(() => console.log('DB connected..')).catch(err => console.log(err));
 
